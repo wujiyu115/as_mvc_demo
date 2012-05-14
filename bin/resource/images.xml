@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<image label="apple">resource/assets/apple.png</image>
+	<image label="burger">resource/assets/burger.png</image>
+	<image label="cake">resource/assets/cake.png</image>
+	<image label="coffee">resource/assets/coffee.png</image>
+</data>
