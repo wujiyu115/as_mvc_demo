@@ -4,6 +4,7 @@ package
 	import com.bit101.components.Style;
 	import com.far.mvc.demo.common.view.ImageSelect;
 	import com.far.mvc.demo.common.view.ImageShow;
+	import com.far.mvc.demo.mvcexpress.ImageCore;
 	import com.far.mvc.demo.puremvc.ImageFacade;
 	import com.far.mvc.demo.robotlegs.ImageShowContext;
 	import com.far.mvc.demo.robotlegs_signal.ImageRobotLegSignal;
@@ -20,6 +21,7 @@ package
 	{
 		private var context:Context;
 		private var facade:ImageFacade;
+		private var _imagecore:ImageCore;
 		public function Main():void
 		{
 			if (stage)
@@ -38,8 +40,11 @@ package
 			 
 			//context = new ImageShowContext(this);
 		   //context = new ImageRobotLegSignal(this);
-		   facade =  ImageFacade.getInstance();
-		   facade.startUp(this);
+		   //facade =  ImageFacade.getInstance();
+		      //facade.startUp(this);
+		   _imagecore = new ImageCore();
+		   _imagecore.start(this);
+		
 
 		}
 		
