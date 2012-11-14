@@ -1,6 +1,6 @@
 package com.far.mvc.demo.mvcexpress 
 {
-	import com.far.mvc.demo.mvcexpress.c.StartUpCommand;
+	import com.far.mvc.demo.mvcexpress.c.InitCommand;
 	import org.mvcexpress.core.ModuleCore;
 	
 	/**
@@ -16,14 +16,16 @@ package com.far.mvc.demo.mvcexpress
 			
 		}
 		
+		
 		override protected function onInit():void 
 		{
 			super.onInit();
-		     commandMap.map(Msg.START_UP, StartUpCommand);
+			commandMap.map(Msg.START_UP, InitCommand);
+ 
 		}
 		
 		public function  start(main:Object):void {
-             sendMessage(Msg.START_UP, main);
+             sendMessage(Msg.START_UP,main);
 		}
 	}
 

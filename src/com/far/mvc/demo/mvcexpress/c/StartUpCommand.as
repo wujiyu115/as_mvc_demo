@@ -1,31 +1,29 @@
-package com.far.mvc.demo.mvcexpress.c 
+package com.far.mvc.demo.mvcexpress.c
 {
-	import com.far.mvc.demo.common.view.ImageSelect;
-	import com.far.mvc.demo.common.view.ImageShow;
-	import com.far.mvc.demo.mvcexpress.v.ImageSelectMediator;
-	import com.far.mvc.demo.mvcexpress.v.ImageShowMediator;
+	
+	import com.far.mvc.demo.mvcexpress.m.AppProxy;
 	import org.mvcexpress.mvc.Command;
+
 	
 	/**
 	 * ...
 	 * @author far
 	 */
-	public class StartUpCommand extends Command 
+	public class StartUpCommand extends Command
 	{
+		[Inject]
+		public var _approxy:AppProxy;
 		
-		public function StartUpCommand() 
+		public function StartUpCommand()
 		{
-			
+		
 		}
 		
-		public function execute(blank:Object):void {
-			var main:Main =   blank as Main;
-			mediatorMap.map(ImageSelect, ImageSelectMediator);
-			mediatorMap.map(ImageShow, ImageShowMediator);
-			var slelect:ImageSelect = main.createImageSelect();
-			var show:ImageShow = main.createImageShow();
-			trace(main);
+		public function execute(blank:Object):void
+		{
 		
+			
+			_approxy.beginLoadXML();
 		}
 	}
 
